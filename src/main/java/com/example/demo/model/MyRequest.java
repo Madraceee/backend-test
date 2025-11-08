@@ -1,6 +1,7 @@
 // src/main/java/com/example/demo/model/MyRequest.java
 package com.example.demo.model;
 
+@Entity
 public class MyRequest {
     private String name;
     private int value;
