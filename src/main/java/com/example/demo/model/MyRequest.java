@@ -4,16 +4,16 @@ package com.example.demo.model;
 @Entity
 public class MyRequest {
     private String name;
-    private int value;
+    private int number;
 
     // Default constructor (required by some frameworks like Jackson)
     public MyRequest() {
     }
 
     // All-args constructor
-    public MyRequest(String name, int value) {
+    public MyRequest(String name, int number) {
         this.name = name;
-        this.value = value;
+        this.number = number;
     }
 
     // Getters and Setters (REQUIRED for Spring/Jackson to work)
@@ -25,11 +25,11 @@ public class MyRequest {
         this.name = name;
     }
 
-    public int getValue() {
-        return value;
+    public int getNumber() {
+        return number;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setNumber(int number) {
+        this.number = number;
     }
 }
