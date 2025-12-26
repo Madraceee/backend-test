@@ -15,11 +15,11 @@ public class MyController {
     @PostMapping("/post")
     public String handlePostRequest(@RequestBody MyRequest request) {
         // Log or process the received data
-        System.out.println("POST Request Received: Name=" + request.getName() + ", Value=" + request.getValue());
+        System.out.println("POST Request Received: Name=" + request.getName() + ", Value=" + request.getNumber());
         
         // Return a response string
         return "POST request processed successfully! Received: " 
-             + "**" + request.getNamed() + "** with value **" + request.getValue() + "**.";
+             + "**" + request.getName() + "** with value **" + request.getNumber() + "**.";
     }
 
     // ----------------------------------------------------------------------
@@ -28,13 +28,13 @@ public class MyController {
      * GET Method: Accepts MyRequest as URL query parameters.
      * URL: GET http://localhost:8080/api/data/get?name=testName&value=123
      */
-    @GetMapping("/get")
+    @GetMapping("/getting")
     public String handleGetRequest(@ModelAttribute MyRequest request) {
         // Log or process the received data
-        System.out.println("GET Request Received: Name=" + request.getName() + ", Value=" + request.getValue());
+        System.out.println("GET Request Received: Name=" + request.getName() + ", Value=" + request.getNumber());
 
         // Return a response string
         return "GET request processed successfully! Parameters: " 
-             + "**" + request.getName() + "** and **" + request.getValue() + "**.";
+             + "**" + request.getName() + "** and **" + request.getNumber() + "**.";
     }
 }
